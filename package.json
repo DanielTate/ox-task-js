@@ -1,4 +1,22 @@
 {
+  "name": "@oxidental/ox-task-js",
+  "description": "ox-task-js is a task that compiles scss using esbuild under the hood.",
+  "version": "0.0.5",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielTate/ox-task-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanielTate/ox-task-js/issues"
+  },
+  "homepage": "https://github.com/DanielTate/ox-task-js#readme",
   "dependencies": {
     "esbuild": "^0.12.15"
   }
