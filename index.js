@@ -1,6 +1,20 @@
 const esbuild = require('esbuild')
 
 module.exports = function js(args) {
-    const options = args.options
-    esbuild.build(options)
+
+	args.options.files.forEach((opts) => {
+		let callback = false
+
+		if(opts.callback) {
+			callback = opts.callback
+		}
+
+		delete opts.callback
+
+		esbuild.build(opts).then(() => {
+			if(callback) {
+				callback()
+			}
+		})
+	});
 }

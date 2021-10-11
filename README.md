@@ -10,12 +10,17 @@ ox.js({
     log: true,
     watch: 'src/app.js',
     options: {
-        entryPoints: ['src/app.js'],
-        bundle: true,
-        minify: true,
-        sourcemap: true,
-        logLevel: 'debug',
-        outfile: 'build/app.js',
+		files: [{
+			entryPoints: ['src/app.js'],
+			bundle: true,
+			minify: true,
+			sourcemap: true,
+			logLevel: 'debug',
+			outfile: 'build/app.js',
+			callback: () => {
+				// The file was compiled !
+			}
+		}]
     }
 })
 ```
